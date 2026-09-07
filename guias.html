@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nossos Guias | Iguassu Company</title>
+
+  <link rel="stylesheet" href="guias.css">
+</head>
+
+<body>
+
+  <header>
+    <section>
+      <div>
+        <img src="fotos/logoiguassucompany.png" alt="Iguassu Company — Foz do Iguaçu" />
+
+        <div class="brand-text">
+          <strong>Iguassu Company</strong>
+          <span>Se aventure nos melhores passeios da Tríplice Fronteira</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+
+        <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☾</span>
+          <span class="theme-label">Modo escuro</span>
+        </button>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          ☰
+        </button>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div>
+
+        <nav aria-label="Navegação principal">
+
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#destinos">Destinos</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="guias.html" class="active">Nossos Guias</a></li>
+          </ul>
+
+          <a class="cta"
+            href="https://wa.me/554599691877?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20passeios%20tur%C3%ADsticos."
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Planeje seus passeios
+
+          </a>
+
+        </nav>
+
+      </div>
+    </section>
+  </header>
+
+
+
+  <main>
+
+    <section class="page-header">
+
+      <span class="eyebrow">Conheça nossa equipe</span>
+
+      <h1>Nossos Guias</h1>
+
+      <p>
+        Conheça os profissionais que tornam sua experiência na Tríplice Fronteira
+        ainda mais completa, confortável e especial.
+      </p>
+
+    </section>
+
+
+
+    <section class="guides-container">
+
+      <article class="guide-card">
+
+        <div class="guide-photo">
+
+          <img
+            src="fotos/guia.jpg.jpeg"
+            alt="Guia e motorista de turismo da Iguassu Company nas Cataratas do Iguaçu">
+
+        </div>
+
+
+        <div class="guide-content">
+
+        <span class="eyebrow">
+  Guia e motorista de turismo
+</span>
+
+<h2>Valdemar Coutinho Filho</h2>
+
+<p>
+  Com mais de 5 anos de experiência no turismo, Valdemar Coutinho Filho
+  é guia e motorista de turismo e conhece profundamente os principais
+  destinos de Foz do Iguaçu e da Tríplice Fronteira.
+</p>
+
+<p>
+  Seu conhecimento da região permite proporcionar aos visitantes uma
+  experiência mais completa, confortável e segura, compartilhando
+  informações importantes e ajudando cada turista a aproveitar melhor
+  os destinos visitados.
+</p>
+
+
+          <div class="guide-details">
+
+            <section class="guide-detail">
+
+              <span class="detail-title">
+                Experiência
+              </span>
+
+              <strong>
+                Mais de 5 anos no turismo
+              </strong>
+
+            </section>
+
+
+            <section class="guide-detail">
+
+              <span class="detail-title">
+                Idiomas
+              </span>
+
+              <strong>
+                Português, Inglês e Espanhol
+              </strong>
+
+            </section>
+
+
+            <section class="guide-detail">
+
+              <span class="detail-title">
+                Especialidade
+              </span>
+
+              <strong>
+                Foz do Iguaçu e Tríplice Fronteira
+              </strong>
+
+            </section>
+
+
+            <section class="guide-detail">
+
+              <span class="detail-title">
+                Serviço
+              </span>
+
+              <strong>
+                Guia e motorista de turismo
+              </strong>
+
+            </section>
+
+          </div>
+
+
+          <p class="closing">
+
+            Mais do que apenas realizar o transporte, nosso objetivo é fazer
+            parte da sua viagem e ajudar você a aproveitar cada destino da melhor
+            maneira possível.
+
+          </p>
+
+
+          <a class="whatsapp-link"
+            href="https://wa.me/554599691877?text=Ol%C3%A1%2C%20gostaria%20de%20planejar%20meus%20passeios%20com%20a%20Iguassu%20Company."
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <img src="fotos/whatsapp.svg" alt="" aria-hidden="true">
+
+            Falar com a equipe
+
+          </a>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+
+    <section class="experience-section">
+
+      <span class="eyebrow">
+        Uma experiência completa
+      </span>
+
+      <h2>
+        Conheça a região com quem realmente entende do destino
+      </h2>
+
+      <p>
+        Ter um profissional que conhece a região faz toda a diferença durante
+        uma viagem. Nossa equipe está preparada para oferecer conforto,
+        segurança e informações importantes durante seus passeios.
+      </p>
+
+    </section>
+
+  </main>
+
+
+
+  <script>
+
+    const menuButton = document.querySelector('.menu-toggle');
+    const menuSection = document.querySelector('header > section:nth-child(2)');
+    const themeToggle = document.querySelector('.theme-toggle');
+    const themeIcon = document.querySelector('.theme-icon');
+
+
+    menuButton.addEventListener('click', () => {
+
+      const isOpen = menuSection.classList.toggle('open');
+
+      menuButton.setAttribute('aria-expanded', isOpen);
+
+      menuButton.setAttribute(
+        'aria-label',
+        isOpen ? 'Fechar menu' : 'Abrir menu'
+      );
+
+      menuButton.textContent = isOpen ? '×' : '☰';
+
+    });
+
+
+    const aplicarTema = (escuro) => {
+
+      document.body.classList.toggle('dark-mode', escuro);
+
+      themeToggle.setAttribute('aria-pressed', escuro);
+
+      themeToggle.setAttribute(
+        'aria-label',
+        escuro ? 'Ativar modo claro' : 'Ativar modo escuro'
+      );
+
+      themeIcon.textContent = escuro ? '☀' : '☾';
+
+    };
+
+
+    aplicarTema(
+      localStorage.getItem('iguassu-tema') === 'escuro'
+    );
+
+
+    themeToggle.addEventListener('click', () => {
+
+      const escuro =
+        !document.body.classList.contains('dark-mode');
+
+      aplicarTema(escuro);
+
+      localStorage.setItem(
+        'iguassu-tema',
+        escuro ? 'escuro' : 'claro'
+      );
+
+    });
+
+  </script>
+
+</body>
+
+</html>
