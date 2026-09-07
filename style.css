@@ -355,11 +355,11 @@
       font-size: 1.4rem;
     }
 
-    .destinos {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 72px 0;
-    }
+  .destinos {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 28px 0 72px;
+}
 
     .destinos-toolbar {
       display: flex;
@@ -764,10 +764,10 @@
         bottom: 22px;
       }
 
-      .destinos {
-        width: min(100% - 28px, 1180px);
-        padding: 52px 0;
-      }
+.destinos {
+  width: min(100% - 28px, 1180px);
+  padding: 24px 0 52px;
+}
 
       .theme-toggle {
         width: 38px;
