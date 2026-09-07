@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Início | Iguassu Company</title>
+</head>
+<body>
+     <header>
+    <section>
+      <div>
+        <img src="fotos/logoiguassucompany.png" alt="Iguassu Company — Foz do Iguaçu" />
+        <div class="brand-text">
+          <strong>Iguassu Company</strong>
+          <span>Se aventure nos melhores passeios da Tríplice Fronteira</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☾</span>
+          <span class="theme-label">Modo escuro</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <nav aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#destinos">Destinos</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="#blog">Nossos Guias</a></li>
+          </ul>
+          <a class="cta" href="https://wa.me/554599691877?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20passeios%20tur%C3%ADsticos." target="_blank" rel="noopener noreferrer">Planeje seus passeios</a>
+        </nav>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="destinos" id="destinos" aria-labelledby="destinos-titulo">
+      <div class="destinos-toolbar">
+        <label class="search-label" for="buscar-passeios">
+          Buscar:
+          <input
+            class="search-input"
+            id="buscar-passeios"
+            type="search"
+            placeholder="Digite um passeio..."
+            autocomplete="off"
+          />
+        </label>
+        <label class="filter-label" for="ordenar-passeios">
+          Ordenar por:
+          <select class="filter-select" id="ordenar-passeios">
+            <option value="visitados">Mais visitados</option>
+            <option value="alfabetica">Ordem alfabética</option>
+          </select>
+        </label>
+        <label class="favorite-filter" for="filtro-favoritos">
+          Exibir:
+          <select class="filter-select" id="filtro-favoritos">
+            <option value="todos">Todos os passeios</option>
+            <option value="favoritos">Meus favoritos</option>
+          </select>
+          <span class="favorites-count" id="contador-favoritos">0</span>
+        </label>
+      </div>
+
+      <div class="destinos-grid">
+        <article class="destination-card">
+          <img src="fotos/cataratas-brasileiras.jpg" alt="Cataratas Brasileiras" />
+          <div class="destination-card-content">
+            <h3 id="destinos-titulo">Cataratas Brasileiras</h3>
+            <a class="learn-more" href="cataratasnr.html">Saiba mais</a>
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/cataratas-argentina.jpg" alt="Cataratas Argentinas" />
+          <div class="destination-card-content">
+            <h3>Cataratas Argentinas</h3>
+            <a class="learn-more" href="cataratasarg.html">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/itaipu.jpg" alt="Usina de Itaipu" />
+          <div class="destination-card-content"><h3>Itaipu</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/city-tour-paraguai.jpg" alt="City Tour Paraguai" />
+          <div class="destination-card-content"><h3>City Tour Paraguai</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/city-tour-foz-do-iguaçu.jpg" alt="City Tour Foz do Iguaçu" />
+          <div class="destination-card-content"><h3>City Tour Foz</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/marco-das-tres.jpg" alt="Marco das Três Fronteiras" />
+          <div class="destination-card-content"><h3>Marco das Três Fronteiras</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/by-night.jpg" alt="By Night" />
+          <div class="destination-card-content"><h3>By Night</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/movie-cars.jpg" alt="Movie Cars" />
+          <div class="destination-card-content"><h3>Movie Cars</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/dreamland.jpg" alt="Dreamland" />
+          <div class="destination-card-content"><h3>Dreamland</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/compras-paraguai.jpg" alt="Compras no Paraguai" />
+          <div class="destination-card-content"><h3>Compras Paraguai</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/helisul.jpg" alt="Passeio Helisul" />
+          <div class="destination-card-content"><h3>Helisul</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/parque-das-aves.jpg" alt="Parque das Aves" />
+          <div class="destination-card-content"><h3>Parque das Aves</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/aquario.jpg" alt="Aquário" />
+          <div class="destination-card-content"><h3>Aquário</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/rafain.jpg" alt="Jantar com show Rafain" />
+          <div class="destination-card-content"><h3>Jantar com Show Rafain</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/aguaray.jpg" alt="Aguaray Transporte" />
+          <div class="destination-card-content"><h3>Aguaray</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/aeroporto.jpg" alt="In Foz do Iguaçu" />
+          <div class="destination-card-content"><h3>Chegada em Foz do Iguaçu</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+        <article class="destination-card">
+          <img src="fotos/aeroporto.jpg" alt="Out Foz do Iguaçu" />
+          <div class="destination-card-content"><h3>Saída de Foz do Iguaçu</h3><a class="learn-more" href="#contato">Saiba mais</a></div>
+        </article>
+      </div>
+      <p class="no-results" id="nenhum-resultado" role="status">
+        Nenhum passeio encontrado. Tente de outro jeito.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const button = document.querySelector('.menu-toggle');
+    const menuSection = document.querySelector('header > section:nth-child(2)');
+
+    button.addEventListener('click', () => {
+      const isOpen = menuSection.classList.toggle('open');
+      button.setAttribute('aria-expanded', isOpen);
+      button.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+      button.textContent = isOpen ? '×' : '☰';
+    });
+
+    const themeToggle = document.querySelector('.theme-toggle');
+    const themeIcon = document.querySelector('.theme-icon');
+    const aplicarTema = (escuro) => {
+      document.body.classList.toggle('dark-mode', escuro);
+      themeToggle.setAttribute('aria-pressed', escuro);
+      themeToggle.setAttribute('aria-label', escuro ? 'Ativar modo claro' : 'Ativar modo escuro');
+      themeIcon.textContent = escuro ? '☀' : '☾';
+    };
+
+    aplicarTema(localStorage.getItem('iguassu-tema') === 'escuro');
+    themeToggle.addEventListener('click', () => {
+      const escuro = !document.body.classList.contains('dark-mode');
+      aplicarTema(escuro);
+      localStorage.setItem('iguassu-tema', escuro ? 'escuro' : 'claro');
+    });
+
+    const ordenarPasseios = document.querySelector('#ordenar-passeios');
+    const buscarPasseios = document.querySelector('#buscar-passeios');
+    const gradePasseios = document.querySelector('.destinos-grid');
+    const nenhumResultado = document.querySelector('#nenhum-resultado');
+    const cardsPasseios = [...gradePasseios.querySelectorAll('.destination-card')];
+    const numeroWhatsApp = '554599691877';
+    const filtroFavoritos = document.querySelector('#filtro-favoritos');
+    const contadorFavoritos = document.querySelector('#contador-favoritos');
+    const favoritosSalvos = new Set(JSON.parse(localStorage.getItem('iguassu-favoritos') || '[]'));
+
+    const atualizarContador = () => {
+      contadorFavoritos.textContent = favoritosSalvos.size;
+    };
+
+    const filtrarCards = () => {
+      const termo = buscarPasseios.value.trim().toLocaleLowerCase('pt-BR');
+      let cardsVisiveis = 0;
+
+      cardsPasseios.forEach((card) => {
+        const titulo = card.querySelector('h3').textContent.trim();
+        const encontrado = titulo.toLocaleLowerCase('pt-BR').includes(termo);
+        const eFavorito = favoritosSalvos.has(titulo);
+        const visivel = encontrado && (filtroFavoritos.value === 'todos' || eFavorito);
+
+        card.hidden = !visivel;
+        if (visivel) cardsVisiveis += 1;
+      });
+
+      nenhumResultado.classList.toggle('visible', cardsVisiveis === 0);
+    };
+
+    // A ordem original representa a ordem de mais visitados.
+    cardsPasseios.forEach((card, index) => {
+      card.dataset.visitas = index + 1;
+
+      const titulo = card.querySelector('h3').textContent.trim();
+      const mensagem = `Olá, gostaria de saber mais de ${titulo}.`;
+      const tituloElement = card.querySelector('h3');
+      const titleRow = document.createElement('div');
+      const botaoFavorito = document.createElement('button');
+
+      titleRow.className = 'destination-title-row';
+      botaoFavorito.className = 'favorite-button';
+      botaoFavorito.type = 'button';
+      botaoFavorito.addEventListener('click', () => {
+        if (favoritosSalvos.has(titulo)) favoritosSalvos.delete(titulo);
+        else favoritosSalvos.add(titulo);
+
+        localStorage.setItem('iguassu-favoritos', JSON.stringify([...favoritosSalvos]));
+        atualizarFavoritoVisual(card, botaoFavorito);
+        atualizarContador();
+        filtrarCards();
+      });
+
+      const atualizarFavoritoVisual = (cardAtual, botao) => {
+        const salvo = favoritosSalvos.has(cardAtual.querySelector('h3').textContent.trim());
+        botao.classList.toggle('is-favorite', salvo);
+        botao.textContent = salvo ? '★' : '☆';
+        botao.setAttribute('aria-pressed', salvo);
+        botao.setAttribute('aria-label', salvo ? `Remover ${titulo} dos favoritos` : `Adicionar ${titulo} aos favoritos`);
+        botao.title = salvo ? 'Remover dos favoritos' : 'Adicionar aos favoritos';
+      };
+
+      tituloElement.replaceWith(titleRow);
+      titleRow.append(tituloElement, botaoFavorito);
+      atualizarFavoritoVisual(card, botaoFavorito);
+      const botaoWhatsApp = document.createElement('a');
+
+      botaoWhatsApp.className = 'whatsapp-button';
+      botaoWhatsApp.href = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+      botaoWhatsApp.target = '_blank';
+      botaoWhatsApp.rel = 'noopener noreferrer';
+      botaoWhatsApp.setAttribute('aria-label', `Falar sobre ${titulo} pelo WhatsApp`);
+
+      const iconeWhatsApp = document.createElement('img');
+      iconeWhatsApp.src = 'fotos/whatsapp.svg';
+      iconeWhatsApp.alt = '';
+      iconeWhatsApp.setAttribute('aria-hidden', 'true');
+      botaoWhatsApp.append(iconeWhatsApp, document.createTextNode('Falar pelo WhatsApp'));
+
+      card.querySelector('.destination-card-content').appendChild(botaoWhatsApp);
+    });
+    atualizarContador();
+
+    ordenarPasseios.addEventListener('change', (event) => {
+      const cardsOrdenados = [...cardsPasseios].sort((cardA, cardB) => {
+        const tituloA = cardA.querySelector('h3').textContent.trim();
+        const tituloB = cardB.querySelector('h3').textContent.trim();
+
+        if (event.target.value === 'alfabetica') {
+          return tituloA.localeCompare(tituloB, 'pt-BR');
+        }
+
+        return Number(cardA.dataset.visitas) - Number(cardB.dataset.visitas);
+      });
+
+      cardsOrdenados.forEach((card) => gradePasseios.appendChild(card));
+    });
+
+    buscarPasseios.addEventListener('input', filtrarCards);
+    filtroFavoritos.addEventListener('change', filtrarCards);
+
+  </script>
+</body>
+</html>

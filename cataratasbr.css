@@ -1,0 +1,509 @@
+:root {
+      --azul-profundo: #062c56;
+      --azul-logo: #0b3d70;
+      --azul-ceu: #39a9e8;
+      --verde-floresta: #2f7d32;
+      --dourado: #f6b51b;
+      --branco: #ffffff;
+      --texto: #102a43;
+      --sombra: 0 10px 30px rgba(6, 44, 86, 0.16);
+    }
+
+    body.dark-mode {
+      --branco: #102a43;
+      --texto: #e6f4ff;
+      --azul-profundo: #d9efff;
+      --azul-logo: #75c8f2;
+      --sombra: 0 10px 30px rgba(0, 0, 0, 0.3);
+      background: #071a2c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: #f5fbff;
+      color: var(--texto);
+      transition: background 0.45s ease, color 0.45s ease;
+    }
+
+    header,
+    .service-option,
+    .carousel,
+    .whatsapp-link {
+      transition: background-color 0.45s ease, border-color 0.45s ease,
+        color 0.45s ease, box-shadow 0.45s ease;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--branco);
+      box-shadow: 0 8px 24px rgba(6, 44, 86, 0.12);
+    }
+        
+    header::before {
+      content: "";
+      display: block;
+      height: 5px;
+      background: linear-gradient(90deg, #062c56, #39a9e8, #2f7d32, #f6b51b);
+    }
+
+    header > section {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header > section:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 92px;
+    }
+
+    header > section:first-child > div:first-child {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    header img {
+      display: block;
+      width: 76px;
+      height: 76px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .brand-text strong {
+      color: var(--azul-profundo);
+      font-size: 1.15rem;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-text span {
+      margin-top: 6px;
+      color: var(--verde-floresta);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle,
+    .menu-toggle {
+      border: 1px solid #b9d2e3;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+    }
+
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--azul-profundo);
+      font-size: 0.85rem;
+      padding: 8px 12px;
+    }
+
+    .menu-toggle {
+      display: none;
+      border-radius: 10px;
+      background: var(--azul-profundo);
+      color: var(--branco);
+      font-size: 1.35rem;
+      padding: 8px 11px;
+    }
+
+    header > section:nth-child(2) {
+      border-top: 1px solid #e1edf4;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 58px;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    nav a {
+      position: relative;
+      display: inline-block;
+      color: var(--azul-profundo);
+      font-size: 0.94rem;
+      font-weight: 700;
+      padding: 20px 0;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav a::after {
+      position: absolute;
+      right: 0;
+      bottom: 11px;
+      left: 0;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--dourado);
+      content: "";
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: var(--azul-ceu);
+    }
+
+    nav a:hover::after,
+    nav a:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .cta {
+      border-radius: 999px;
+      background: var(--dourado);
+      color: #15314b !important;
+      padding: 12px 20px !important;
+      box-shadow: 0 5px 12px rgba(246, 181, 27, 0.25);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .cta::after {
+      display: none;
+    }
+
+    .cta:hover,
+    .cta:focus-visible {
+      background: #ffc83d;
+      color: #102a43 !important;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 760px) {
+      header > section {
+        width: min(100% - 28px, 1180px);
+      }
+
+      header > section:first-child {
+        min-height: 78px;
+      }
+
+      header img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .brand-text strong {
+        font-size: 1rem;
+      }
+
+      .brand-text span,
+      .theme-label {
+        display: none;
+      }
+
+      .theme-toggle {
+        width: 38px;
+        height: 38px;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      header > section:nth-child(2) {
+        display: none;
+      }
+
+      header > section:nth-child(2).open {
+        display: block;
+      }
+
+      nav,
+      nav ul {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      nav ul {
+        gap: 0;
+        padding: 8px 0 14px;
+      }
+
+      nav a {
+        display: block;
+        padding: 12px 4px;
+      }
+
+      .cta {
+        margin: 8px 0 14px;
+        text-align: center;
+      }
+    }
+
+
+    main {
+      width: min(1140px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 22px 0 52px;
+    }
+
+    .cataratas-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .carousel {
+      position: relative;
+      width: min(100%, 820px);
+      overflow: hidden;
+      border-radius: 18px;
+      background: transparent;
+      box-shadow: var(--sombra);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    .slide {
+      position: relative;
+      flex: 0 0 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide figcaption {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      left: 18px;
+      border-radius: 10px;
+      background: rgba(3, 28, 54, 0.68);
+      color: #ffffff;
+      font-size: 0.82rem;
+      padding: 8px 12px;
+      backdrop-filter: blur(5px);
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 50%;
+      background: rgba(3, 28, 54, 0.62);
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 1.55rem;
+      transform: translateY(-50%);
+      transition: background 0.2s ease, transform 0.2s ease;
+      z-index: 2;
+    }
+
+    .carousel-button:hover,
+    .carousel-button:focus-visible {
+      background: var(--azul-logo);
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    .carousel-button.previous {
+      left: 16px;
+    }
+
+    .carousel-button.next {
+      right: 16px;
+    }
+
+    .carousel-dots {
+      position: absolute;
+      right: 0;
+      bottom: 18px;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      z-index: 2;
+    }
+
+    .carousel-dot {
+      width: 9px;
+      height: 9px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.58);
+      cursor: pointer;
+      transition: width 0.2s ease, background 0.2s ease;
+    }
+
+    .carousel-dot.active {
+      width: 26px;
+      border-radius: 999px;
+      background: var(--dourado);
+    }
+
+    .content {
+      width: min(100%, 820px);
+      margin: 0 auto;
+      padding: 2px 0;
+    }
+
+    .content .eyebrow {
+      color: var(--verde-floresta);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .content h2 {
+      margin: 6px 0 12px;
+      color: var(--azul-profundo);
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.05;
+    }
+
+    .content p {
+      margin-top: 9px;
+    }
+
+    .service-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .service-option {
+      border: 1px solid #d9e9f2;
+      border-radius: 14px;
+      background: var(--branco);
+      padding: 15px;
+      box-shadow: 0 8px 20px rgba(6, 44, 86, 0.06);
+    }
+
+    body.dark-mode header > section:nth-child(2),
+    body.dark-mode .service-option {
+      border-color: #315675;
+    }
+
+    .service-option h3 {
+      color: var(--azul-logo);
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .service-option p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .closing {
+      margin-top: 14px !important;
+      color: var(--azul-profundo);
+      font-weight: 700;
+    }
+
+    .whatsapp-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 999px;
+      background: #25d366;
+      color: var(--branco);
+      font-weight: 800;
+      padding: 13px 20px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .whatsapp-link:hover,
+    .whatsapp-link:focus-visible {
+      background: #1ebe5d;
+      transform: translateY(-3px);
+    }
+
+    .whatsapp-link img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 860px) {
+      .content {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 540px) {
+      main {
+        width: min(100% - 28px, 1180px);
+        padding-top: 18px;
+      }
+
+      .page-header {
+        padding-top: 22px;
+      }
+
+      .carousel {
+        border-radius: 18px;
+      }
+
+      .service-options {
+        grid-template-columns: 1fr;
+      }
+
+      .carousel-button {
+        width: 36px;
+        height: 36px;
+      }
+    }

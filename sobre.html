@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conheça a Iguassu Company, especializada em transporte e transporte guiado para passeios na Tríplice Fronteira." />
+  <title>Sobre nós | Iguassu Company</title>
+  <link rel="stylesheet" href="sobre.css">
+</head>
+<body>
+   <header>
+    <section>
+      <div>
+        <img src="fotos/logoiguassucompany.png" alt="Iguassu Company — Foz do Iguaçu" />
+        <div class="brand-text">
+          <strong>Iguassu Company</strong>
+          <span>Se aventure nos melhores passeios da Tríplice Fronteira</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☾</span>
+          <span class="theme-label">Modo escuro</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <nav aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#destinos">Destinos</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="#blog">Nossos Guias</a></li>
+          </ul>
+          <a class="cta" href="https://wa.me/554599691877?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20passeios%20tur%C3%ADsticos." target="_blank" rel="noopener noreferrer">Planeje seus passeios</a>
+        </nav>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="intro">
+      <span class="eyebrow">Sobre a Iguassu Company</span>
+      <h1>Conheça quem acompanha você pela Tríplice Fronteira</h1>
+      <p>
+        Somos uma empresa especializada em transporte e transporte guiado para os principais passeios de Foz do Iguaçu, Paraguai e Argentina.
+      </p>
+    </section>
+
+    <section class="about-panel">
+      <h2>Transporte com conforto, segurança e conhecimento da região</h2>
+      <p>
+        A Iguassu Company nasceu para tornar os passeios da Tríplice Fronteira mais tranquilos, organizados e especiais. Nosso trabalho é oferecer um transporte confiável para que você aproveite cada destino sem se preocupar com deslocamentos, horários e rotas.
+      </p>
+      <p>
+        Nossa equipe é formada por guias e motoristas preparados para atender você com pontualidade, cuidado e atenção. Além de conduzir com segurança, conhecemos a história, a cultura e os principais atrativos de Foz do Iguaçu, Paraguai e Argentina.
+      </p>
+
+      <div class="services">
+        <article class="service-card">
+          <h3>Transporte</h3>
+          <p>
+            Transporte de ida e volta com conforto, segurança e pontualidade para os passeios da Tríplice Fronteira. Você aproveita o destino enquanto cuidamos do seu deslocamento.
+          </p>
+        </article>
+        <article class="service-card">
+          <h3>Transporte guiado</h3>
+          <p>
+            Além do transporte, você conta com o acompanhamento de nossa equipe de guias e motoristas, que compartilha informações e torna cada passeio mais completo.
+          </p>
+        </article>
+      </div>
+
+      <div class="values" aria-label="Nossos compromissos">
+        <div class="value">
+          <strong>Pontualidade</strong>
+          <span>Respeito aos seus horários e ao seu roteiro.</span>
+        </div>
+        <div class="value">
+          <strong>Segurança</strong>
+          <span>Deslocamentos tranquilos e responsáveis.</span>
+        </div>
+        <div class="value">
+          <strong>Conhecimento</strong>
+          <span>Guias e motoristas que conhecem a região.</span>
+        </div>
+      </div>
+
+      <a class="contact-button" href="https://wa.me/554599691877?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20servi%C3%A7os%20de%20transporte%20da%20Iguassu%20Company." target="_blank" rel="noopener noreferrer">Fale com nossa equipe</a>
+    </section>
+  </main>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const menuSection = document.querySelector('header > section:nth-child(2)');
+    const themeToggle = document.querySelector('.theme-toggle');
+    const themeIcon = document.querySelector('.theme-icon');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuSection.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', isOpen);
+      menuButton.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+      menuButton.textContent = isOpen ? '×' : '☰';
+    });
+
+    const aplicarTema = (escuro) => {
+      document.body.classList.toggle('dark-mode', escuro);
+      themeToggle.setAttribute('aria-pressed', escuro);
+      themeToggle.setAttribute('aria-label', escuro ? 'Ativar modo claro' : 'Ativar modo escuro');
+      themeIcon.textContent = escuro ? '☀' : '☾';
+    };
+
+    aplicarTema(localStorage.getItem('iguassu-tema') === 'escuro');
+
+    themeToggle.addEventListener('click', () => {
+      const escuro = !document.body.classList.contains('dark-mode');
+      aplicarTema(escuro);
+      localStorage.setItem('iguassu-tema', escuro ? 'escuro' : 'claro');
+    });
+  </script>
+</body>
+</html>
