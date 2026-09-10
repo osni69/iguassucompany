@@ -312,17 +312,47 @@
       font-size: 0.9rem;
     }
 
-    .contact-button {
-      display: inline-flex;
-      margin-top: 32px;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
+    .whatsapp-link {
+  display: inline-flex;
 
-    .contact-button:hover,
-    .contact-button:focus-visible {
-      background: #ffc83d;
-      transform: translateY(-3px);
-    }
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  margin-top: 25px;
+
+  border-radius: 999px;
+
+  background: #25d366;
+
+  color: #ffffff;
+
+  font-weight: 800;
+
+  padding: 13px 20px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.whatsapp-link:hover,
+.whatsapp-link:focus-visible {
+  background: #1ebe5d;
+
+  transform: translateY(-3px);
+}
+
+
+.whatsapp-link img {
+  width: 20px;
+  height: 20px;
+}
 
     @media (max-width: 760px) {
       header > section { width: min(100% - 28px, 1180px); }
