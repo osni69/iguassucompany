@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chegada em Foz do Iguaçu | Iguassu Company</title>
+    <link rel="stylesheet" href="cataratasbr.css">
+</head>
+<body>
+
+<header>
+    <section>
+      <div>
+        <img src="fotos/logoiguassucompany.png" alt="Iguassu Company — Foz do Iguaçu" />
+
+        <div class="brand-text">
+          <strong>Iguassu Company</strong>
+          <span>Se aventure nos melhores passeios da Tríplice Fronteira</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☾</span>
+          <span class="theme-label">Modo escuro</span>
+        </button>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <nav aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#destinos">Destinos</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="guias.html">Nossos Guias</a></li>
+            <li><a href="index.html#ingressos">Ingressos</a></li>
+          </ul>
+          <a class="cta" href="https://wa.me/554599691877?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20passeios%20tur%C3%ADsticos." target="_blank" rel="noopener noreferrer">Planeje seus passeios</a>
+        </nav>
+      </div>
+    </section>
+</header>
+
+<main>
+    <div class="cataratas-layout">
+
+        <section class="carousel" aria-label="Galeria do transporte de chegada">
+
+            <div class="carousel-track">
+
+                <figure class="slide">
+                    <img src="fotos/aeroporto.jpg" alt="Transporte de chegada em Foz do Iguaçu">
+                    <figcaption>
+                        Chegue a Foz do Iguaçu com conforto e tranquilidade.
+                    </figcaption>
+                </figure>
+
+                <figure class="slide">
+                    <img src="fotos/rodoviaria.jpg" alt="Transporte turístico em Foz do Iguaçu">
+                    <figcaption>
+                        Transporte do aeroporto ou rodoviária até o seu hotel.
+                    </figcaption>
+                </figure>
+
+                <figure class="slide">
+                    <img src="fotos/transporte.jpeg" alt="Veículo da Iguassu Company">
+                    <figcaption>
+                        Conte com a Iguassu Company desde o momento da sua chegada.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <button class="carousel-button previous"
+                    type="button"
+                    aria-label="Imagem anterior">
+                ‹
+            </button>
+
+            <button class="carousel-button next"
+                    type="button"
+                    aria-label="Próxima imagem">
+                ›
+            </button>
+
+            <div class="carousel-dots" aria-label="Selecionar imagem"></div>
+
+        </section>
+
+        <article class="content">
+
+            <span class="eyebrow">Transporte turístico</span>
+
+            <h2>Chegada em Foz do Iguaçu</h2>
+
+            <p>
+                Comece sua viagem por Foz do Iguaçu com conforto e tranquilidade.
+                A Iguassu Company realiza o transporte de chegada para você não
+                precisar se preocupar com deslocamento assim que desembarcar na cidade.
+            </p>
+
+            <p>
+                Buscamos você no aeroporto ou na rodoviária de Foz do Iguaçu e
+                realizamos o transporte até o seu hotel, proporcionando praticidade
+                desde o primeiro momento da sua viagem.
+            </p>
+
+            <p>
+                Depois de uma viagem, nada melhor do que chegar ao seu destino sem
+                precisar procurar transporte ou se preocupar com o caminho. Nossa
+                equipe realiza o deslocamento com conforto, segurança e pontualidade.
+            </p>
+
+            <p>
+                Você escolhe a experiência que prefere:
+            </p>
+
+            <div class="service-options">
+
+                <section class="service-option">
+
+                    <h3>Transporte</h3>
+
+                    <p>
+                        Buscamos você no aeroporto ou na rodoviária e levamos
+                        diretamente até o seu hotel em Foz do Iguaçu, com conforto,
+                        segurança e praticidade.
+                    </p>
+
+                </section>
+
+            </div>
+
+            <p>
+                Seja sua primeira visita à cidade ou mais uma viagem pela região,
+                conte com a Iguassu Company para começar sua experiência em Foz do
+                Iguaçu da melhor maneira.
+            </p>
+
+            <p class="closing">
+                Chegue em Foz do Iguaçu com tranquilidade. Nós cuidamos do seu
+                transporte para você começar a aproveitar a cidade sem preocupações.
+            </p>
+
+            <a class="whatsapp-link"
+               href="https://wa.me/554599691877?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20transporte%20de%20chegada%20em%20Foz%20do%20Igua%C3%A7u."
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img src="fotos/whatsapp.svg" alt="" aria-hidden="true">
+
+                Falar com a equipe
+
+            </a>
+
+        </article>
+
+    </div>
+</main>
+
+<script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const menuSection = document.querySelector('header > section:nth-child(2)');
+    const themeToggle = document.querySelector('.theme-toggle');
+    const themeIcon = document.querySelector('.theme-icon');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuSection.classList.toggle('open');
+
+      menuButton.setAttribute('aria-expanded', isOpen);
+      menuButton.setAttribute(
+        'aria-label',
+        isOpen ? 'Fechar menu' : 'Abrir menu'
+      );
+      menuButton.textContent = isOpen ? '×' : '☰';
+    });
+
+    const aplicarTema = (escuro) => {
+      document.body.classList.toggle('dark-mode', escuro);
+      themeToggle.setAttribute('aria-pressed', escuro);
+      themeToggle.setAttribute(
+        'aria-label',
+        escuro ? 'Ativar modo claro' : 'Ativar modo escuro'
+      );
+      themeIcon.textContent = escuro ? '☀' : '☾';
+    };
+
+    aplicarTema(localStorage.getItem('iguassu-tema') === 'escuro');
+
+    themeToggle.addEventListener('click', () => {
+      const escuro = !document.body.classList.contains('dark-mode');
+
+      aplicarTema(escuro);
+
+      localStorage.setItem(
+        'iguassu-tema',
+        escuro ? 'escuro' : 'claro'
+      );
+    });
+
+    const track = document.querySelector('.carousel-track');
+    const slides = [...document.querySelectorAll('.slide')];
+    const dotsContainer = document.querySelector('.carousel-dots');
+    const previousButton = document.querySelector('.carousel-button.previous');
+    const nextButton = document.querySelector('.carousel-button.next');
+
+    let currentSlide = 0;
+    let autoplay;
+
+    slides.forEach((_, index) => {
+      const dot = document.createElement('button');
+
+      dot.className = 'carousel-dot';
+      dot.type = 'button';
+
+      dot.setAttribute(
+        'aria-label',
+        `Ir para a imagem ${index + 1}`
+      );
+
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        restartAutoplay();
+      });
+
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = [...dotsContainer.children];
+
+    function showSlide(index) {
+      currentSlide =
+        (index + slides.length) % slides.length;
+
+      track.style.transform =
+        `translateX(-${currentSlide * 100}%)`;
+
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle(
+          'active',
+          dotIndex === currentSlide
+        );
+      });
+    }
+
+    function restartAutoplay() {
+      clearInterval(autoplay);
+
+      autoplay = setInterval(
+        () => showSlide(currentSlide + 1),
+        5500
+      );
+    }
+
+    previousButton.addEventListener('click', () => {
+      showSlide(currentSlide - 1);
+      restartAutoplay();
+    });
+
+    nextButton.addEventListener('click', () => {
+      showSlide(currentSlide + 1);
+      restartAutoplay();
+    });
+
+    showSlide(0);
+    restartAutoplay();
+</script>
+
+</body>
+</html>

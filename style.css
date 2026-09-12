@@ -637,6 +637,164 @@
       transform: translateY(-2px);
     }
 
+  /* =========================
+   SEÇÃO DE INGRESSOS
+========================= */
+
+.ingressos {
+  width: min(1180px, calc(100% - 40px ));
+  margin: 70px auto 80px;
+}
+
+.ingressos-header {
+  max-width: 680px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.section-kicker {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--verde-floresta);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ingressos-header h2 {
+  margin: 0;
+  color: var(--azul-profundo);
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1.15;
+}
+
+.ingressos-header p {
+  margin: 14px auto 0;
+  color: #5b7182;
+  line-height: 1.6;
+}
+
+.ingressos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.ingresso-card {
+  overflow: hidden;
+  border: 1px solid #e2edf3;
+  border-radius: 18px;
+  background: var(--branco);
+  box-shadow: 0 8px 24px rgba(6, 44, 86, 0.1);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ingresso-card:hover {
+  box-shadow: 0 14px 30px rgba(6, 44, 86, 0.17);
+  transform: translateY(-6px);
+}
+
+.ingresso-card > img {
+  display: block;
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+
+.ingresso-card-content {
+  padding: 18px;
+}
+
+.ingresso-tag {
+  display: inline-block;
+  margin-bottom: 9px;
+  border-radius: 999px;
+  background: #eaf6ed;
+  color: var(--verde-floresta);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 5px 9px;
+  text-transform: uppercase;
+}
+
+.ingresso-card h3 {
+  margin: 0;
+  color: var(--azul-profundo);
+  font-size: 1.1rem;
+}
+
+.ingresso-card p {
+  min-height: 68px;
+  margin: 10px 0 18px;
+  color: #607586;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ingresso-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--azul-profundo);
+  color: var(--branco);
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 12px 14px;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ingresso-button:hover,
+.ingresso-button:focus-visible {
+  background: var(--verde-floresta);
+  color: var(--branco);
+  transform: translateY(-2px);
+}
+
+.ingressos-footer {
+  margin-top: 26px;
+  text-align: center;
+}
+
+.ingressos-footer p {
+  color: #607586;
+  font-size: 0.92rem;
+}
+
+.ingressos-footer a {
+  color: var(--azul-profundo);
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+/* Compatibilidade com o modo escuro */
+
+.dark-mode .ingresso-card {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: #123653;
+}
+
+.dark-mode .ingressos-header h2,
+.dark-mode .ingresso-card h3 {
+  color: var(--branco);
+}
+
+.dark-mode .ingressos-header p,
+.dark-mode .ingresso-card p,
+.dark-mode .ingressos-footer p {
+  color: #c4d7e4;
+}
+
+
+
     @media (max-width: 980px) {
       .destinos-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -781,3 +939,19 @@
       }
 
     }
+    @media (max-width: 950px) {
+  .ingressos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .ingressos {
+    width: min(100% - 28px, 520px);
+    margin-top: 50px;
+  }
+
+  .ingressos-grid {
+    grid-template-columns: 1fr;
+  }
+}
