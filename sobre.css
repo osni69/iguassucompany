@@ -1,0 +1,185 @@
+/* ========== Sobre nós (compacto) — Cataratas ao fundo ========== */
+.sobre-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(3, 28, 54, 0.72), rgba(6, 44, 86, 0.84)),
+    url("fotos/cataratas-brasileiras.jpg") center / cover no-repeat;
+}
+.sobre-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: calc(var(--header-h, 150px) + 24px) 0 48px;
+}
+.sobre-kicker {
+  display: block;
+  margin-bottom: 12px;
+  color: #ffe18a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.sobre-hero h1 {
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.sobre-hero p {
+  max-width: 520px;
+  margin-bottom: 16px;
+  color: #e8f6ff;
+  line-height: 1.6;
+}
+.sobre-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; list-style: none; }
+.sobre-chips li {
+  padding: 5px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.sobre-buttons { margin-top: 0; }
+
+/* Frota: uma foto por veículo */
+.fleet {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.fleet-photo {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+.fleet-wide { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.fleet-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fleet-photo:hover img { transform: scale(1.04); }
+
+@media (max-width: 860px) {
+  .sobre-hero-inner { grid-template-columns: 1fr; gap: 26px; }
+}
+@media (max-width: 760px) {
+  .sobre-hero-inner { width: calc(100% - 28px); padding: calc(var(--header-h, 78px) + 20px) 0 38px; }
+}
+
+/* ========== Header: parte do Sobre nós no topo → barra sólida ao rolar ========== */
+/* --p (0 a 1) e --tx são atualizados pelo JS conforme a rolagem; sem JS fica no estado sólido. */
+header {
+  --p: 1;
+  --tx: 1;
+  isolation: isolate;
+  overflow: visible;
+  margin-bottom: calc(var(--header-h, 150px) * -1); /* o header sobrepõe a foto */
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+}
+@media (max-width: 760px) {
+  header { margin-bottom: calc(var(--header-h, 78px) * -1); }
+}
+
+/* fundo sólido: aparece aos poucos conforme a rolagem */
+header::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--branco);
+  box-shadow: var(--sombra);
+  content: "";
+  opacity: var(--p);
+  pointer-events: none;
+  transition: opacity 0.35s ease-out;
+}
+/* sombra suave no topo para o texto branco ler bem sobre a foto */
+header::after {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(180deg, rgba(3, 28, 54, 0.62), rgba(3, 28, 54, 0));
+  content: "";
+  opacity: calc(1 - var(--p));
+  pointer-events: none;
+  transition: opacity 0.35s ease-out;
+}
+header > section:nth-child(2) { border-top-color: rgba(6, 44, 86, 0.1); }
+
+body.dark-mode header > section:nth-child(2) { border-top-color: rgba(255, 255, 255, 0.12); }
+
+/* logo: círculo branco no topo, some ao rolar */
+header img {
+  border-radius: 50%;
+  padding: calc(5px * (1 - var(--p)));
+  background: rgba(255, 255, 255, calc(0.95 * (1 - var(--p))));
+}
+
+/* cores do texto: fallback por classe e, quando possível, mistura contínua com a rolagem */
+header.is-top .brand-text strong,
+header.is-top nav a:not(.cta),
+header.is-top .theme-toggle { color: #fff; }
+header.is-top .brand-text span { color: #ffe18a; }
+header.is-top .theme-toggle { border-color: rgba(255, 255, 255, 0.55); }
+header.is-top > section:nth-child(2) { border-top-color: rgba(255, 255, 255, 0.25); }
+@supports (color: color-mix(in srgb, red, blue)) {
+  header .brand-text strong,
+  header nav a:not(.cta),
+  header .theme-toggle { color: color-mix(in srgb, var(--azul-profundo) calc(var(--tx) * 100%), #fff); }
+  header .brand-text span { color: color-mix(in srgb, var(--verde-floresta) calc(var(--tx) * 100%), #ffe18a); }
+  header nav a:not(.cta):hover,
+  header nav a:not(.cta):focus-visible { color: color-mix(in srgb, var(--azul-ceu) calc(var(--tx) * 100%), #ffe18a); }
+  header .theme-toggle { border-color: color-mix(in srgb, #b9d2e3 calc(var(--tx) * 100%), rgba(255, 255, 255, 0.55)); }
+  header > section:nth-child(2) { border-top-color: color-mix(in srgb, rgba(6, 44, 86, 0.1) calc(var(--tx) * 100%), rgba(255, 255, 255, 0.25)); }
+  body.dark-mode header > section:nth-child(2) { border-top-color: color-mix(in srgb, rgba(255, 255, 255, 0.12) calc(var(--tx) * 100%), rgba(255, 255, 255, 0.25)); }
+}
+header .brand-text strong, header .brand-text span, header nav a, header .theme-toggle {
+  transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.5s ease;
+}
+.menu-toggle {
+  background: color-mix(in srgb, var(--azul-profundo) calc(var(--tx) * 100%), rgba(255, 255, 255, 0.16));
+  border: 1px solid color-mix(in srgb, transparent calc(var(--tx) * 100%), rgba(255, 255, 255, 0.55));
+}
+
+/* ========== Botão modo claro/escuro mais fluido ========== */
+.theme-icon svg {
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.theme-moon { transform: rotate(0) scale(1); }
+.theme-sun { transform: rotate(-120deg) scale(0.4); }
+body.dark-mode .theme-moon { transform: rotate(120deg) scale(0.4); }
+body.dark-mode .theme-sun { transform: rotate(0) scale(1); }
+.theme-toggle { transition: background-color 0.6s ease, border-color 0.6s ease, color 0.6s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+.theme-toggle:active { transform: scale(0.94); }
+
+/* Troca de tema com cruzamento suave da página inteira (View Transitions) */
+.theme-vt *, .theme-vt *::before, .theme-vt *::after { transition: none !important; }
+.theme-icon { view-transition-name: theme-icon; }
+::view-transition-old(root), ::view-transition-new(root) {
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+::view-transition-old(theme-icon) { animation: theme-icon-out 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; mix-blend-mode: normal; }
+::view-transition-new(theme-icon) { animation: theme-icon-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; mix-blend-mode: normal; }
+@keyframes theme-icon-out { to { opacity: 0; transform: rotate(120deg) scale(0.4); } }
+@keyframes theme-icon-in { from { opacity: 0; transform: rotate(-120deg) scale(0.4); } }
