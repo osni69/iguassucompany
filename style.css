@@ -1549,3 +1549,22 @@ body.dark-mode .contact-card {
     transition-property: transform, opacity, background-color !important;
   }
 }
+@media (max-width: 790px) {
+  /* Desativa qualquer transição global pesada no celular */
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* Força aceleração de hardware nas imagens para rolar sem travar */
+  img {
+    will-change: transform;
+    content-visibility: auto;
+  }
+
+  /* Simplifica elementos visuais complexos no mobile */
+  .destination-card, .guide-card, .service-card, .contact-card {
+    box-shadow: none !important;
+    border: 1px solid #d9e9f2 !important;
+  }
+}

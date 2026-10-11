@@ -30,6 +30,14 @@
     }
   });
 
+  // Função auxiliar para converter a data de AAAA-MM-DD para DD/MM/AAAA
+  function formatDate(dateString) {
+    if (!dateString) return "";
+    const partes = dateString.split("-");
+    if (partes.length !== 3) return dateString;
+    return `${partes[2]}/${partes[1]}/${partes[0]}`;
+  }
+
   // 1. Atualizar resumo em tempo real conforme os passeios são marcados
   function updateSummary() {
     const selected = Array.from(checkboxes)
@@ -56,8 +64,13 @@
       .map(cb => `- ${cb.value}`)
       .join('\n');
 
-    const chegada = document.querySelector('#chegada').value;
-    const saida = document.querySelector('#saida').value;
+    // Captura e aplica a formatação para dia/mes/ano
+    const chegadaRaw = document.querySelector('#chegada').value;
+    const saidaRaw = document.querySelector('#saida').value;
+    
+    const chegada = formatDate(chegadaRaw);
+    const saida = formatDate(saidaRaw);
+
     const pessoas = form.querySelector('[name="pessoas"]').value;
     const servico = form.querySelector('[name="servico"]').value;
     const observacoes = form.querySelector('[name="observacoes"]').value;
@@ -81,4 +94,3 @@
     window.open(whatsappUrl, '_blank');
   });
 })();
-
