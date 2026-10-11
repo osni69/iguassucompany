@@ -1440,3 +1440,90 @@ body.dark-mode .fleet-arrow {
     height: auto;
   }
 }
+
+/* =====================================
+   Descrições dos passeios e contato
+   ===================================== */
+
+.destination-description {
+  margin: 0;
+  color: #527086;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+body.dark-mode .destination-description {
+  color: #b5ccdc;
+}
+
+.contact-section {
+  border-top: 1px solid #b9d2e3;
+  background: linear-gradient(180deg, rgba(232, 246, 255, 0), transparent);
+}
+
+.contact-card {
+  width: min(100%, 620px);
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 42px);
+  border: 1px solid #b9d2e3;
+  border-radius: 18px;
+  background: var(--branco);
+  box-shadow: 0 12px 30px rgba(6, 44, 86, 0.1);
+  text-align: center;
+}
+
+.contact-card h3 {
+  margin-bottom: 12px;
+  color: var(--azul-profundo);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+
+.contact-card p {
+  line-height: 1.65;
+}
+
+.contact-card .contact-number {
+  margin: 18px 0;
+  color: var(--azul-logo);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.contact-card .whatsapp-link {
+  width: 100%;
+  margin-top: 4px;
+}
+
+body.dark-mode .contact-section {
+  border-color: #315675;
+  background: #071a2c ;
+}
+
+body.dark-mode .contact-card {
+  border-color: #315675;
+  background: #102a43;
+}
+
+@media (max-width: 520px) {
+  .destination-description {
+    font-size: 0.88rem;
+  }
+}
+
+/* Padronização do texto dos cards: entre cinco e sete linhas visuais. */
+.destination-description {
+  display: -webkit-box;
+  min-height: 7.75em;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+}
+
+.contact-logo {
+  display: block;
+  width: clamp(86px, 22vw, 132px);
+  height: auto;
+  margin: 0 auto 18px;
+  object-fit: contain;
+}
