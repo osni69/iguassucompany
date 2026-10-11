@@ -545,6 +545,24 @@
         <a href="#sobre">Conheça nossa empresa</a>
       </div>
     </footer>
+    <!-- Rastreamento de cliques no WhatsApp: evento informativo, sem conversão Ads até configurar rótulo. -->
+    <script>
+      document.addEventListener('click', function (event) {
+        const link = event.target.closest('a[href]');
+        if (!link) return;
+        let url;
+        try { url = new URL(link.href, window.location.href); } catch (_) { return; }
+        const whatsappHosts = ['wa.me', 'api.whatsapp.com', 'web.whatsapp.com'];
+        if (!whatsappHosts.includes(url.hostname.toLowerCase())) return;
+        const label = link.getAttribute('aria-label') || link.textContent.trim() || 'WhatsApp';
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'whatsapp_click', {
+            link_text: label.substring(0, 100),
+            link_url: url.origin + url.pathname
+          });
+        }
+      });
+    </script>
     <script defer="True" src="script.js"></script>
     <script defer="True" src="roteiro.js"></script>
     <script defer="" src="header-scroll.js"></script>
