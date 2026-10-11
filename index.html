@@ -545,7 +545,7 @@
         <a href="#sobre">Conheça nossa empresa</a>
       </div>
     </footer>
-    <!-- Rastreamento de cliques no WhatsApp: evento informativo, sem conversão Ads até configurar rótulo. -->
+    <!-- Rastreamento de cliques no WhatsApp e conversão Google Ads. -->
     <script>
       document.addEventListener('click', function (event) {
         const link = event.target.closest('a[href]');
@@ -559,6 +559,9 @@
           window.gtag('event', 'whatsapp_click', {
             link_text: label.substring(0, 100),
             link_url: url.origin + url.pathname
+          });
+          window.gtag('event', 'conversion', {
+            send_to: 'AW-18499476078/KXDuCL-WxpgdEO60nvVE'
           });
         }
       });
