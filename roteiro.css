@@ -155,7 +155,24 @@ body.dark-mode #roteiro .route-fields input,body.dark-mode #roteiro .route-field
 #roteiro .scan-effect { background:linear-gradient(180deg,transparent,#39a9e8,transparent); opacity:.3; }
 #roteiro .route-trip,#roteiro .route-summary,#roteiro .step-number,#roteiro .slab-bg {
   transition:background-color .5s ease,color .5s ease,border-color .5s ease,transform .6s ease; }
-@media(max-width:760px) {
-  #roteiro .brutalist-container { margin-right:10px; }
-  #roteiro .brutalist-container.is-open .concrete-block { box-shadow:4px 4px 0 var(--roteiro-camada),8px 8px 0 rgba(57,169,232,.12),0 12px 25px rgba(6,44,86,.1); }
+
+
+@media(max-width: 790px) {
+  /* Desativa texturas de fundo pesadas no mobile para poupar processamento da GPU */
+  #roteiro .concrete-texture,
+  #roteiro .paper-texture,
+  #roteiro .scan-effect {
+    display: none !important;
+  }
+
+  /* Simplifica drasticamente as sombras em cascata brutalistas que travam o scroll */
+  #roteiro .brutalist-container.is-open .concrete-block {
+    box-shadow: 4px 4px 0 #333 !important;
+  }
+
+  /* Remove sombras e animações complexas das camadas de fundo no mobile */
+  #roteiro .slab-bg {
+    box-shadow: none !important;
+    transform: none !important;
+  }
 }

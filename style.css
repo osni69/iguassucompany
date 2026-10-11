@@ -1527,3 +1527,25 @@ body.dark-mode .contact-card {
   margin: 0 auto 18px;
   object-fit: contain;
 }
+
+@media (max-width: 790px) {
+  /* 1. Desativa efeitos de desfoque pesado (blur) que travam o scroll mobile */
+  .hero-secondary,
+  header {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* 2. Suaviza sombras complexas nos cards no celular para aliviar a GPU */
+  .destination-card,
+  .guide-card,
+  .destinos-toolbar,
+  .contact-card {
+    box-shadow: 0 4px 12px rgba(6, 44, 86, 0.08) !important;
+  }
+
+  /* 3. Evita animações globais pesadas em multiplas propriedades simultâneas ao tocar */
+  *, *::before, *::after {
+    transition-property: transform, opacity, background-color !important;
+  }
+}
