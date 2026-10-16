@@ -1568,3 +1568,8 @@ body.dark-mode .contact-card {
     border: 1px solid #d9e9f2 !important;
   }
 }
+/* Performance: skip layout/paint of offscreen destination cards on supported browsers. */
+.destination-card { content-visibility: auto; contain-intrinsic-size: auto 390px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
