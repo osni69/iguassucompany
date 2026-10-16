@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="preload" as="image" href="fotos/logoiguassucompany.png" fetchpriority="high" />
     <link href="style.css" rel="stylesheet" />
     <link href="footer.css" rel="stylesheet" />
     <link href="sobre.css" rel="stylesheet" />
@@ -27,7 +28,7 @@
     <header>
       <section>
         <div>
-          <img decoding="async" alt="Iguassu Company — Foz do Iguaçu" src="fotos/logoiguassucompany.png" loading="eager" />
+          <img decoding="async" alt="Iguassu Company — Foz do Iguaçu" src="fotos/logoiguassucompany.png" loading="eager" fetchpriority="high" width="72" height="72" />
           <div class="brand-text">
             <strong>Iguassu Company</strong>
             <span>Se aventure nos melhores passeios da Tríplice Fronteira</span>
@@ -80,13 +81,13 @@
             <div class="fleet-viewport">
               <div class="fleet-track">
                 <figure class="fleet-photo">
-                  <img alt="Honda Civic preto de 5 lugares" decoding="async" src="fotos/honda-civic-ia.png" loading="lazy"/>
+                  <img alt="Honda Civic preto de 5 lugares" decoding="async" src="fotos/honda-civic-ia.png" loading="eager" fetchpriority="high"/>
                 </figure>
                 <figure class="fleet-photo fleet-wide">
-                  <img loading="lazy" alt="Van Sprinter azul de 15 lugares" decoding="async" src="fotos/sprinter-ia.png" />
+                  <img loading="lazy" alt="Van Sprinter azul de 15 lugares" decoding="async" src="fotos/sprinter-ia.png" fetchpriority="low" />
                 </figure>
                 <figure class="fleet-photo">
-                  <img alt="Tiggo 8 cinza de 7 lugares" decoding="async" src="fotos/tiggo8-ia.png" loading="lazy" />
+                  <img alt="Tiggo 8 cinza de 7 lugares" decoding="async" src="fotos/tiggo8-ia.png" fetchpriority="low" loading="lazy" />
                 </figure>
               </div>
             </div>
