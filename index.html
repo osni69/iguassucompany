@@ -23,7 +23,7 @@
       gtag("config", "AW-18499476078");
     </script>
     <meta content="Transporte e passeios em Foz do Iguaçu e na Tríplice Fronteira, com carros de 5 e 7 lugares e van de 15 lugares. Monte seu roteiro com a Iguassu Company." name="description" />
-    <link href="roteiro.css" rel="stylesheet" />
+    <link href="roteiro.css" rel="stylesheet" /><link href="conversao.css" rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -100,7 +100,7 @@
           </div>
         </div>
       </section>
-<section aria-labelledby="destinos-titulo" class="destinos">
+<section class="ic-convert" id="orcamento-rapido" aria-labelledby="ic-title"><div class="ic-convert-inner"><span class="ic-eyebrow">Seu roteiro, do seu jeito</span><h2 id="ic-title">Vai viajar para Foz? Descubra o melhor roteiro para seus dias aqui.</h2><p>Não perca tempo tentando encaixar tudo sozinho. Conte o que deseja conhecer e nossa equipe ajuda a organizar um pacote personalizado antes da sua chegada.</p><form id="ic-quick-form"><div class="ic-choices" aria-label="Passeios desejados"><label><input type="checkbox" name="ic-tour" value="Cataratas Brasileiras">💦 Cataratas Brasil</label><label><input type="checkbox" name="ic-tour" value="Cataratas Argentinas">🇦🇷 Cataratas Argentina</label><label><input type="checkbox" name="ic-tour" value="Compras no Paraguai">🛍️ Compras Paraguai</label><label><input type="checkbox" name="ic-tour" value="Parque das Aves">🦜 Parque das Aves</label><label><input type="checkbox" name="ic-tour" value="Itaipu Panorâmica">⚡ Itaipu Panorâmica</label><label><input type="checkbox" name="ic-tour" value="Marco das Três Fronteiras">🌅 Marco das Três Fronteiras</label></div><div class="ic-fields"><label for="ic-date">Quando você chega?<input id="ic-date" type="date" required></label><label for="ic-people">Quantas pessoas?<input id="ic-people" type="number" min="1" max="100" value="2" required></label><label for="ic-days">Quantos dias em Foz?<select id="ic-days" required><option value="">Selecione</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6 ou mais</option></select></label></div><button class="ic-submit" type="submit">📲 Quero meu roteiro pelo WhatsApp</button><p class="ic-small" id="ic-error" role="alert"></p><p class="ic-small">Orçamento sem compromisso. Valores e disponibilidade confirmados no atendimento. <a href="monte-sua-viagem.html">Ver mais opções de passeios →</a></p></form></div></section><section aria-labelledby="destinos-titulo" class="destinos">
         <div class="section-heading">
           <h2 id="destinos-titulo">Escolha seu próximo passeio</h2>
           <p>Agende com nossa equipe ou reúna seus destinos favoritos em um roteiro.</p>
@@ -547,7 +547,7 @@
         <a href="#sobre">Conheça nossa empresa</a>
       </div>
     </footer>
-    <!-- Rastreamento de cliques no WhatsApp e conversão Google Ads. -->
+    <a class="ic-floating" href="#orcamento-rapido" aria-label="Montar roteiro e pedir orçamento">📲 Monte seu roteiro</a><aside class="ic-nudge" id="ic-nudge" hidden><button class="ic-close" id="ic-nudge-close" aria-label="Fechar convite" type="button">×</button><strong>Já sabe quando vem para Foz?</strong><p>Monte seu pacote antes de chegar e aproveite melhor cada dia.</p><a href="#orcamento-rapido">Quero planejar minha viagem →</a></aside>\n    <!-- Rastreamento de cliques no WhatsApp e conversão Google Ads. -->
     <script>
       document.addEventListener('click', function (event) {
         const link = event.target.closest('a[href]');
@@ -571,6 +571,6 @@
     <script defer="True" src="script.js"></script>
     <script defer="True" src="roteiro.js"></script>
     <script defer="" src="header-scroll.js"></script>
-    <script defer src="frota.js"></script>
+    <script defer src="frota.js"></script>\n    <script defer src="conversao.js"></script>
   </body>
 </html>
