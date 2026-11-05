@@ -1,0 +1,36 @@
+/* Rodapé moderno Iguassu Company — isolado para não alterar o restante do site */
+.site-footer.ic-footer-v2{background:#082743!important;color:#eaf4ff!important;padding:0!important;margin:0!important;font-family:inherit}
+.ic-footer-v2 *{box-sizing:border-box}
+.ic-footer-v2 .ic-footer-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.ic-footer-v2 a{color:inherit;text-decoration:none}
+.ic-footer-v2 a:hover{text-decoration:underline;text-underline-offset:4px}
+.ic-footer-v2 a:focus-visible{outline:3px solid #ffcf65;outline-offset:4px;border-radius:3px}
+.ic-footer-v2 .ic-footer-cta{display:flex;justify-content:space-between;align-items:center;gap:28px;padding:36px 0 32px;border-bottom:1px solid #ffffff29}
+.ic-footer-v2 .ic-footer-eyebrow{font-size:12px;font-weight:800;letter-spacing:.15em;color:#8fdbcc}
+.ic-footer-v2 .ic-footer-cta h2{font-size:clamp(24px,3vw,35px);line-height:1.15;margin:9px 0 12px;color:#fff}
+.ic-footer-v2 .ic-footer-cta p{margin:0;max-width:620px;color:#c5d8e7;line-height:1.65}
+.ic-footer-v2 .ic-footer-wa{flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;gap:15px;background:#24c06c;color:#072d21!important;border-radius:12px;padding:17px 22px;font-weight:800;box-shadow:0 8px 24px #0002;transition:transform .2s,background .2s}
+.ic-footer-v2 .ic-footer-wa:hover{background:#52dc91;text-decoration:none;transform:translateY(-2px)}
+.ic-footer-v2 .ic-footer-main{display:grid;grid-template-columns:minmax(220px,1.35fr) repeat(2,minmax(145px,1fr)) minmax(190px,1fr);gap:36px;padding:42px 0 38px}
+.ic-footer-v2 .ic-footer-brand{display:inline-flex;align-items:center;gap:12px;font-size:20px;font-weight:800;color:#fff}
+.ic-footer-v2 .ic-footer-brand img{width:62px;height:62px;object-fit:contain;border-radius:50%}
+.ic-footer-v2 .ic-footer-brand b{color:#ffcf65}
+.ic-footer-v2 .ic-footer-about p,.ic-footer-v2 .ic-footer-contact p{color:#c3d5e3;font-size:14px;line-height:1.75;margin:16px 0}
+.ic-footer-v2 .ic-footer-social-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.ic-footer-v2 .ic-footer-social-links a{display:inline-flex;border:1px solid #ffffff3d;padding:9px 13px;border-radius:9px;font-weight:700;font-size:13px}
+.ic-footer-v2 .ic-footer-social-links a:hover{background:#ffffff12;text-decoration:none}
+.ic-footer-v2 .ic-footer-column h3{color:#fff;font-size:16px;margin:8px 0 18px;font-weight:800}
+.ic-footer-v2 .ic-footer-column ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:13px}
+.ic-footer-v2 .ic-footer-column li{padding:0;margin:0;line-height:1.4}
+.ic-footer-v2 .ic-footer-column li a{font-size:14px;color:#d5e3ef}
+.ic-footer-v2 .ic-footer-phone{display:inline-block;font-size:20px;font-weight:800;color:#9ce7b6}
+.ic-footer-v2 .ic-footer-reg{display:flex;flex-direction:column;gap:5px;margin-top:22px;padding-top:16px;border-top:1px solid #ffffff29;font-size:13px;color:#c3d5e3}
+.ic-footer-v2 .ic-footer-reg strong{color:#fff;font-size:15px}
+.ic-footer-v2 .ic-footer-legal{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:23px 0;border-top:1px solid #ffffff29;border-bottom:1px solid #ffffff29}
+.ic-footer-v2 .ic-footer-legal nav{display:flex;flex-wrap:wrap;gap:12px 21px;max-width:730px}
+.ic-footer-v2 .ic-footer-legal a,.ic-footer-v2 .ic-footer-legal p{font-size:12px;color:#b8cfdf;line-height:1.5}
+.ic-footer-v2 .ic-footer-legal p{margin:0;max-width:300px}
+.ic-footer-v2 .ic-footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px 0 28px;font-size:12px;color:#9eb8cb}
+@media(max-width:1000px){.ic-footer-v2 .ic-footer-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 40px}.ic-footer-v2 .ic-footer-cta{align-items:flex-start}.ic-footer-v2 .ic-footer-legal{flex-direction:column}}
+@media(max-width:640px){.ic-footer-v2 .ic-footer-wrap{padding:0 20px}.ic-footer-v2 .ic-footer-cta{flex-direction:column;gap:22px;padding:32px 0}.ic-footer-v2 .ic-footer-wa{width:100%;text-align:center}.ic-footer-v2 .ic-footer-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px;padding:32px 0}.ic-footer-v2 .ic-footer-about{grid-column:1/-1}.ic-footer-v2 .ic-footer-contact{grid-column:1/-1}.ic-footer-v2 .ic-footer-column h3{font-size:15px;margin:0 0 14px}.ic-footer-v2 .ic-footer-column li a{font-size:13px}.ic-footer-v2 .ic-footer-legal{padding:22px 0}.ic-footer-v2 .ic-footer-bottom{flex-direction:column;gap:6px}}
+@media(max-width:360px){.ic-footer-v2 .ic-footer-main{grid-template-columns:1fr}.ic-footer-v2 .ic-footer-about,.ic-footer-v2 .ic-footer-contact{grid-column:auto}}
