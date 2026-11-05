@@ -60,3 +60,32 @@ body.dark-mode .ic-showcase .ic-show-card-body>a:first-of-type:hover{background:
 body.dark-mode .ic-showcase .ic-show-card-body>a.ic-detail:hover{background:#315f79}
 body.dark-mode .ic-showcase .ic-trust a:hover{color:#d6f3ff}
 @media(max-width:790px){body.dark-mode .destination-card,body.dark-mode .guide-card,body.dark-mode .service-card,body.dark-mode .contact-card{border-color:#3a5a72!important}}
+
+/* Rodapé e passeios inferiores: contraste garantido no modo claro */
+body:not(.dark-mode) .ic-showcase,body:not(.dark-mode) .ic-showcase h2,body:not(.dark-mode) .ic-showcase h3,body:not(.dark-mode) .ic-showcase p,body:not(.dark-mode) .ic-showcase strong,body:not(.dark-mode) .ic-showcase label{color:#17354b}
+body:not(.dark-mode) .ic-showcase .ic-show-note{color:#465c6c}
+body:not(.dark-mode) .ic-showcase .ic-show-kicker{color:#086645}
+body:not(.dark-mode) .ic-showcase .ic-show-card,body:not(.dark-mode) .ic-showcase .ic-combo article,body:not(.dark-mode) .ic-showcase .ic-trust-grid>div{background:#fff;color:#17354b}
+body:not(.dark-mode) .ic-showcase .ic-combo{background:#eef7fc;color:#17354b}
+body:not(.dark-mode) .ic-showcase .ic-trust{background:#f4f9fc;color:#17354b}
+body:not(.dark-mode) .ic-showcase .ic-detail{background:#e8f2f8;color:#174969!important}
+body:not(.dark-mode) .ic-showcase .ic-show-card a:not(.ic-detail),body:not(.dark-mode) .ic-showcase .ic-combo a{color:#fff!important}
+body:not(.dark-mode) .ic-convert,body:not(.dark-mode) .ic-convert h2,body:not(.dark-mode) .ic-convert h3,body:not(.dark-mode) .ic-convert p,body:not(.dark-mode) .ic-convert label,body:not(.dark-mode) .ic-convert summary{color:#173b32}
+body:not(.dark-mode) .ic-convert .ic-small{color:#49675b}
+body:not(.dark-mode) .ic-convert .ic-eyebrow{color:#0c7650}
+body:not(.dark-mode) .ic-convert .ic-package-tag{color:#096943}
+body:not(.dark-mode) .ic-convert .ic-submit{color:#fff}
+body:not(.dark-mode) .ic-convert input,body:not(.dark-mode) .ic-convert select{background:#fff;color:#153e31}
+.site-footer,.site-footer h2,.site-footer strong,.site-footer nav,.site-footer nav strong,.site-footer .footer-logo{color:#fff!important}
+.site-footer p,.site-footer .footer-brand p,.site-footer .site-footer-bottom p{color:#d9e9f4!important}
+.site-footer a,.site-footer nav a,.site-footer .site-footer-bottom a{color:#e1f3ff!important;text-decoration:underline;text-underline-offset:3px}
+.site-footer a:hover,.site-footer a:focus-visible{color:#fff!important}
+.site-footer nav[aria-label="Informações legais e atendimento"]{width:min(1180px,calc(100% - 40px));margin:auto;border-top:1px solid #ffffff35}
+.site-footer nav[aria-label="Informações legais e atendimento"] div{display:flex;gap:8px;flex-wrap:wrap}
+.site-footer nav[aria-label="Informações legais e atendimento"] a{display:inline-block}
+.site-footer nav[aria-label="Serviços privativos"] a{display:inline-block;padding:2px 0}
+#ic-cookie-banner,#ic-cookie-banner p,#ic-cookie-banner strong{color:#16334b!important}
+#ic-cookie-banner{background:#fff!important;border-color:#aabfcb!important;color-scheme:light}
+#ic-cookie-banner a{color:#075c90!important}
+#ic-cookie-banner button.ic-reject{color:#075c46!important;background:#fff!important}
+#ic-cookie-banner button:not(.ic-reject){color:#fff!important;background:#087f4c!important}
