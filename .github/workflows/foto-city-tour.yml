@@ -1,0 +1,36 @@
+name: Publicar foto City Tour Foz
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/foto-city-tour.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publicar-foto:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Baixar foto licenciada do Templo Budista
+        run: |
+          python - <<'PY'
+          from urllib.request import Request, urlopen
+          from pathlib import Path
+          url = "https://commons.wikimedia.org/wiki/Special:FilePath/Templo_Budista_de_Foz_do_Igua%C3%A7u.jpg?width=960"
+          req = Request(url, headers={"User-Agent":"IguassucompanyWebsite/1.0 (image attribution on /creditos-imagens.html)"})
+          with urlopen(req, timeout=45) as response:
+              content = response.read()
+          if not content.startswith(b'\xff\xd8') or len(content)<20000:
+              raise SystemExit("Download não retornou JPEG válido")
+          Path("fotos/city-tour-templo-budista.jpg").write_bytes(content)
+          PY
+      - name: Enviar foto para o site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fotos/city-tour-templo-budista.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m "Publica foto real do Templo Budista no City Tour"
+            git push
+          fi
