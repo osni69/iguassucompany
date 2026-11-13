@@ -58,6 +58,7 @@
   // 2. Enviar dados formatados para o WhatsApp ao submeter o formulário
   form.addEventListener('submit', (event) => {
     event.preventDefault();
+    if (!form.reportValidity()) return;
 
     const selectedPasseios = Array.from(checkboxes)
       .filter(cb => cb.checked)
@@ -91,6 +92,11 @@
     const encodedMessage = encodeURIComponent(mensagem);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-    window.open(whatsappUrl, '_blank');
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'whatsapp_click', {method: 'roteiro_detalhado'});
+      window.gtag('event', 'conversion', {send_to: 'AW-18499476078/KXDuCL-WxpgdEO60nvVE'});
+    }
+    // Navegação na mesma aba evita bloqueadores de pop-up em celulares.
+    window.location.assign(whatsappUrl);
   });
 })();
