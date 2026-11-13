@@ -86,14 +86,7 @@ function validateDates() {
   departure.setCustomValidity(arrival.value && departure.value && departure.value < arrival.value ? 'A data de saída deve ser igual ou posterior à chegada.' : '');
 }
 arrival.addEventListener('input', validateDates); departure.addEventListener('input', validateDates);
-const formatDate = value => value ? value.split('-').reverse().join('/') : 'A definir';
-form.addEventListener('submit', event => {
-  event.preventDefault(); validateDates(); if (!form.reportValidity()) return;
-  const data = new FormData(form); const selected = data.getAll('passeios');
-  const message = ['Olá, gostaria de fazer meu roteiro com a Iguassu Company!', '', 'Passeios: ' + (selected.length ? selected.join(', ') : 'Quero sugestões da equipe'), 'Chegada: ' + formatDate(data.get('chegada')), 'Saída: ' + formatDate(data.get('saida')), 'Pessoas: ' + (data.get('pessoas') || 'A definir'), 'Serviço: ' + data.get('servico')];
-  const notes = data.get('observacoes').trim(); if (notes) message.push('Observações: ' + notes);
-  window.open('https://wa.me/5545999691877?text=' + encodeURIComponent(message.join('\n')), '_blank', 'noopener,noreferrer');
-});
+// O envio do roteiro é tratado exclusivamente em roteiro.js para evitar abrir o WhatsApp duas vezes.
 
 // Entradas suaves na rolagem, sem esconder conteúdo caso o JavaScript falhe.
 function revealElement(element, delay = 0) {
